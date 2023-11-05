@@ -1,0 +1,205 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    padding: 3%;
+}
+
+.save-container {
+    background-color: rgba(72, 97, 152, 0.3);
+    border: 2px solid #68c6c6;
+    border-radius: 8px;
+    box-shadow: 0 0px 8px 0px rgb(11, 202, 255, 0.5);
+    text-align: center;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.head-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.print-button {
+    width: 30%;
+}
+
+.input-column {
+    text-align: start;
+    margin: 8px;
+}
+
+.table-container {
+    color: #68c6c6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: space-between;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+td {
+    color: #f2f2f2;
+}
+
+th {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    transition: font-size 1s ease-in-out,
+        background-color 1s ease-in-out,
+        color 1s ease-in-out;
+}
+
+th:hover {
+    font-size: 21px;
+    color: #4b7878;
+}
+
+tr:hover {
+    background-color: #68c6c6;
+    cursor: pointer;
+}
+
+.pagination {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button.active {
+    background-color: #68c6c6;
+    color: #fff;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.pagination button {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.pagination li {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination li.active {
+    font-weight: bold;
+}
+
+label {
+    color: white;
+    white-space: nowrap;
+    font-size: 70%;
+}
+
+
+@media (max-width: 1000px) {
+
+    .save-container {
+        background-color: rgba(72, 97, 152, 0.3);
+        border: 2px solid #68c6c6;
+        border-radius: 8px;
+        box-shadow: 0 0px 8px 0px rgb(11, 202, 255, 0.5);
+        text-align: center;
+        width: 600px;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: space-between;
+    }
+}
+
+
+@media (max-width: 668px) {
+    .save-container {
+        width: 320px;
+    }
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    color: white;
+}
+
+.status {
+    color: #68c6c6;
+    font-weight: 900;
+    font-size: larger;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #68c6c6;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

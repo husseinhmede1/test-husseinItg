@@ -1,0 +1,33 @@
+.inner-institution-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-between;
+}
+
+.logout-container {
+    position: fixed;
+    right: 20px;
+}
+
+.logout-button {
+    align-items: center;
+    background-color: #ffffff44;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+    .inner-institution-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: space-between;
+    }
+}

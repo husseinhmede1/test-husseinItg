@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## Running the Project Locally
+- npm install
+- npm start
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###### Changes Made for Test
+######
+This project utilizes a responsive React.js along with CSS and Redux Toolkit for efficient data management
+and redux-persist to persisting Redux.
+It employs hooks for state management and Redux for user authentication. 
+######
 
-## Available Scripts
+The structure is as follows:
 
-In the project directory, you can run:
+######
+- SignIn Component (Login Page):
+######
+Responsible for handling form submission, sending user credentials for authentication.
+Upon successful authentication, it logs in the user, extracts a token, and redirects to "/institutionPage".
+In case of an error, it displays an alert.
+Utilizes a loader component for feedback during loading.
+If the user is already logged in, they are redirected to the institution page.
 
-### `npm start`
+######
+- InstitutionPage Component (Institution Page):
+######
+Defines a function, handleLogout, to manage user logout by dispatching a logout action and redirecting to the login page.
+Contains components for various functionalities:
+LoaderComponent: Displays loading indicators.
+Logout button.
+Search bar (SearchComponent) for filtering institutions.
+Grid (GridComponent) for displaying institution data.
+Component (SaveComponent) for editing and saving institution information.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+######
+- SearchComponent Component:
+######
+Utilizes the useEffect hook to fetch a list of active institutions on component mount.
+Upon a successful response, it updates the list of institutions.
+Filters the list based on the provided search term.
+Renders a container with a heading "Institutions" and an input field for searching.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+######
+- GridComponent Component:
+######
+Imports file-saver for file downloads and a custom SliderComponent.
+Uses the useEffect hook to fetch institution data based on the search term.
+Implements debouncing for enhanced performance.
+Provides functions for sorting data, paginating results, printing the table, handling clicks on institutions, changing status, and deleting institutions.
+Renders a container with a heading "Institutions List", a print button, and a slider component for selecting options.
+Displays a table with pagination controls, sortable columns, and options for deleting or changing the status of institutions.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+######
+- SaveComponent Component:
+######
+Upon submission, makes a POST request to the API "v1/config/institutions"
+with the institution data and appropriate headers, 
+including an authorization token.

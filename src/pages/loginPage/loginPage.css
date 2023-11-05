@@ -1,0 +1,23 @@
+.login-container {
+    background-color: rgba(72, 97, 152, 0.3);
+    border: 2px solid #68c6c6;
+    border-radius: 8px;
+    box-shadow: 0 0px 8px 0px rgb(11, 202, 255, 0.5);
+    text-align: center;
+    width: 700px;
+    margin: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        width: 250px;
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}

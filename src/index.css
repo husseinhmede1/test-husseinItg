@@ -1,10 +1,67 @@
 body {
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background:
+    radial-gradient(circle at top left, black, transparent),
+    radial-gradient(circle at top right, black, transparent),
+    radial-gradient(circle at bottom left, black, transparent),
+    radial-gradient(circle at bottom right, black, transparent),
+    linear-gradient(rgb(78, 126, 165), rgb(78, 126, 165));
+  background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 100% 100%;
+  background-position: top left, top right, bottom left, bottom right, center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+h5 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+input,
+button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #132d49;
+  color: white;
+  border: none;
+}
+
+button {
+  font-family: "Courier New", monospace;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-family: "Courier New", monospace;
+}
+
+input:hover,
+button:hover {
+  background-color: #68c6c6;
+  cursor: pointer;
 }
 
 code {

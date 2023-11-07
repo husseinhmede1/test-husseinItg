@@ -119,6 +119,15 @@ export const SaveComponent = ({ institutionForEdit, setInstitutionForEdit, setLo
                         defaultValue={institutionForEdit?.ecomOutputPath}
                         onChange={handleChange}
                     />
+                    <label>Renewal new expirydate:</label>
+                    <input
+                        type="text"
+                        id="adhocRnNewExp"
+                        name="adhocRnNewExp"
+                        placeholder="Renewal new expirydate"
+                        defaultValue={institutionForEdit?.adhocRnNewExp}
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="input-column">
                     <label>Name:</label>
@@ -173,6 +182,15 @@ export const SaveComponent = ({ institutionForEdit, setInstitutionForEdit, setLo
                         name="hsmEncPinLength"
                         placeholder="HSM Encrypted PIN Length"
                         defaultValue={institutionForEdit?.hsmEncPinLength}
+                        onChange={handleChange}
+                    />
+                    <label>Replacement new expirydate:</label>
+                    <input
+                        type="text"
+                        id="adhocRpNewExp"
+                        name="adhocRpNewExp"
+                        placeholder="Replacement new expirydate"
+                        defaultValue={institutionForEdit?.adhocRpNewExp}
                         onChange={handleChange}
                     />
                 </div>
